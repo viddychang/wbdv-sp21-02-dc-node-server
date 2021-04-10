@@ -2,7 +2,7 @@
 // Controllers deal with all things HTTP
 // sits between two worlds: the HTTP world and the JavaScript Object world
 module.exports = (app) => {
-    const quizzesService = require('../services/quizzes/quizzes-service')
+    const quizzesService = require('../services/quizzes/quiz-service')
 
     // req, res allows participating in client/server
     // architecture
