@@ -1,4 +1,4 @@
-const quizzes = require('../quizzes.json')
+const quizzes = require('./quizzes.json')
 
 // TODO: Node.js Assignment this week
 const findAllQuizzes = () => {

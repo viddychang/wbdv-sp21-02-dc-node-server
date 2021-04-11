@@ -13,8 +13,8 @@ app.use(function (req, res, next) {
 });
 
 
-const demos = require('./controllers/demos-controller')
-demos(app)
+// const demos = require('./controllers/demos-controller')
+// demos(app)
 
 // const quizzesController = require('./controllers/quizzes-controller')
 // quizzesController(app)
