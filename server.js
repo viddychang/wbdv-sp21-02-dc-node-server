@@ -22,6 +22,7 @@ app.use(function (req, res, next) {
     next();
 });
 
+// an available endpoint to see if the server is running
 app.get('/', (req, res) => {
     res.send('Welcome to Assginment 8 Node server')
 });
