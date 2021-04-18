@@ -2,6 +2,8 @@
 const express = require('express')
 const app = express()
 
+app.listen(process.env.PORT || 3001)
+
 const mongoose = require('mongoose');
 mongoose.connect(
     'mongodb://localhost:27017/whiteboard-02-dc',
