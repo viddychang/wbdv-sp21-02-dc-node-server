@@ -5,7 +5,7 @@ const app = express()
 app.listen(process.env.PORT || 3001)
 const mongoose = require('mongoose');
 mongoose.connect(
-    'mongodb://localhost:27017/whiteboard-02-dc',
+    'mongodb+srv://dc11194:gaeWxXHMXDQ9sky@whiteboard-dc.7fzo7.mongodb.net/whiteboard?retryWrites=true&w=majority,
     {useNewUrlParser: true, useUnifiedTopology: true});
 
 var bodyParser = require('body-parser')
