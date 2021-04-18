@@ -1,25 +1,7 @@
-const quizzes = require('./quizzes.json')
+const quizzesDao = require('../../daos/quizzes-dao')
 
-// TODO: Node.js Assignment this week
-const findAllQuizzes = () => {
-    return quizzes
-}
-const findQuizById = (quizId) => {
-    return quizzes.find((quiz) => {
-        return quiz._id === quizId
-    })
-}
+const findAllQuizzes = () => quizzesDao.findAllQuizzes()
 
-// console.log(findAllQuizzes())
-// console.log(findQuizById('123'))
+const findQuizById = (qid) => quizzesDao.findQuizById(qid)
 
-// TODO: MongoDB Assignment next week
-const createQuiz = () => {}
-const updateQuiz = () => {}
-const deleteQuiz = () => {}
-
-module.exports = {
-    createQuiz,
-    findQuizById, findAllQuizzes,
-    updateQuiz, deleteQuiz
-}
+module.exports = { findAllQuizzes, findQuizById }
