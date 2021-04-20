@@ -2,7 +2,6 @@
 const express = require('express')
 const app = express()
 
-app.listen(process.env.PORT || 3001)
 const mongoose = require('mongoose');
 mongoose.connect(
     'mongodb+srv://dc11194:gaeWxXHMXDQ9sky@whiteboard-dc.7fzo7.mongodb.net/whiteboard?retryWrites=true&w=majority',
@@ -40,4 +39,4 @@ require('./controllers/quizzes-controller')(app)
 require('./controllers/questions-controller')(app)
 require('./controllers/quiz-attempts-controller')(app)
 
-app.listen(4000)
+app.listen(process.env.PORT || 4000)
