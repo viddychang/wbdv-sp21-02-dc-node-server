@@ -8,9 +8,6 @@ mongoose.connect(
     'mongodb+srv://dc11194:gaeWxXHMXDQ9sky@whiteboard-dc.7fzo7.mongodb.net/whiteboard?retryWrites=true&w=majority',
     {useNewUrlParser: true, useUnifiedTopology: true});
 
-var bodyParser = require('body-parser')
-app.use(bodyParser.urlencoded({ extended: false }))
-app.use(bodyParser.json())
 
 // Configures CORS
 app.use(function (req, res, next) {
@@ -21,6 +18,12 @@ app.use(function (req, res, next) {
         'GET, POST, PUT, PATCH, DELETE, OPTIONS');
     next();
 });
+
+var bodyParser = require('body-parser')
+app.use(bodyParser.urlencoded({ extended: false }))
+app.use(bodyParser.json())
+
+
 
 // an available endpoint to see if the server is running
 app.get('/', (req, res) => {

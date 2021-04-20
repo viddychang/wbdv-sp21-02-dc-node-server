@@ -2,7 +2,6 @@ const quizAttemptDao = require('../daos/quiz-attempts-dao')
 
 module.exports = (app) => {
    app.post('/api/quizzes/:qid/attempts', (req, res) => {
-       console.log(req.params['qid'])
        quizAttemptDao.createAttempt( req.params['qid'], req.body)
            .then(attempt => res.send(attempt))})
 
